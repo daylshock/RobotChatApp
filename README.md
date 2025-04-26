@@ -20,13 +20,18 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-username/название-репозитория.git
+   git clone https://github.com/daylshock/RobotChatApp.git
 2. Откройте решение в Visual Studio:
-  RobotChatCLI.sln
-3. Соберите решение:
-  Конфигурация: Debug | x64
+   ```bash
+   RobotChatCLI.sln
+
+4. Соберите решение:
+   ```bash
+   Конфигурация: Debug | x64
 
 📷 Скриншоты
+
+
 ![Снимок экрана 2025-04-26 222807](https://github.com/user-attachments/assets/d3cac112-ced5-435d-8eae-a5b0ac46b1c0)
 ![Снимок экрана 2025-04-26 222753](https://github.com/user-attachments/assets/a60eb830-7b47-4502-905e-06eaa6218b8e)
 
