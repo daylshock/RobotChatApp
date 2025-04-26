@@ -18,13 +18,13 @@ namespace RobotChatApp
 
         this->messagesListView->Dock = System::Windows::Forms::DockStyle::Fill;
         this->messagesListView->View = System::Windows::Forms::View::Details;
-        this->messagesListView->Columns->Add("Отправитель", 150);
-        this->messagesListView->Columns->Add("Сообщение", 400);
-        this->messagesListView->Columns->Add("Дата", 100);
+        this->messagesListView->Columns->Add("Sender", 150);
+        this->messagesListView->Columns->Add("Message", 400);
+        this->messagesListView->Columns->Add("Date", 100);
 
         this->messageTextBox->Dock = System::Windows::Forms::DockStyle::Fill;
 
-        this->sendButton->Text = "Отправить";
+        this->sendButton->Text = "Send";
         this->sendButton->Dock = System::Windows::Forms::DockStyle::Right;
         this->sendButton->Click += gcnew System::EventHandler(this, &ChatForm::SendButton_Click);
 

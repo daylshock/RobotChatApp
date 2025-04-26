@@ -7,9 +7,9 @@ namespace RobotChatApp
 		chats = gcnew System::Collections::Generic::List<Chat^>();
 		ChatService::InitializeTestData();
 		botResponses = gcnew array<String^> {
-											"Интересно, расскажите подробнее.",
-											"Я робот и не совсем понимаю ваш вопрос.",
-											"Спасибо за ваше сообщение! Как я могу помочь?"
+											"I'm interested, tell me more.",
+											"I'm a robot and I don't quite understand your question.",
+											"Thank you for your message! How can I help?"
 											};
 	}
 	void ChatService::InitializeTestData()
@@ -17,12 +17,12 @@ namespace RobotChatApp
 		for (int i = 1; i <= 5; i++)
 		{
 			Chat^ chat = gcnew Chat();
-			chat->Title = String::Format("Чат {0}", i);
+			chat->Title = String::Format("Chat {0}", i);
 			
 			Message^ message = gcnew Message();
-			message->Text = String::Format("Тестовое сообщение {0}", i);
+			message->Text = String::Format("Test message {0}", i);
 			message->Date = DateTime::Now.AddMinutes(-i);
-			message->SenderName = "Пользователь";
+			message->SenderName = "User";
 			message->IsFromUser = true;
 
 			chat->Messages->Add(message);
@@ -54,7 +54,7 @@ namespace RobotChatApp
 		Message^ userMessage = gcnew Message();
 		userMessage->Text = messageText;
 		userMessage->Date = DateTime::Now;
-		userMessage->SenderName = "Вы";
+		userMessage->SenderName = "You";
 		userMessage->IsFromUser = true;
 
 		chat->Messages->Add(userMessage);
@@ -65,7 +65,7 @@ namespace RobotChatApp
 		Message^ botMessage = gcnew Message();
 		botMessage->Text = botResponse;
 		botMessage->Date = DateTime::Now;
-		botMessage->SenderName = "Робот";
+		botMessage->SenderName = "Robot";
 		botMessage->IsFromUser = false;
 
 		chat->Messages->Add(botMessage);

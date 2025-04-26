@@ -17,14 +17,14 @@ namespace RobotChatApp
         this->chatListView->Dock = System::Windows::Forms::DockStyle::Fill;
         this->chatListView->View = System::Windows::Forms::View::Details;
         this->chatListView->FullRowSelect = true;
-        this->chatListView->Columns->Add("Название", 200);
-        this->chatListView->Columns->Add("Последнее сообщение", 300);
-        this->chatListView->Columns->Add("Отправитель", 150);
-        this->chatListView->Columns->Add("Дата", 100);
+        this->chatListView->Columns->Add("Name", 200);
+        this->chatListView->Columns->Add("Last message", 300);
+        this->chatListView->Columns->Add("Sender", 150);
+        this->chatListView->Columns->Add("Date", 100);
         this->chatListView->SelectedIndexChanged +=
             gcnew System::EventHandler(this, &ChatListForm::ChatListView_SelectedIndexChanged);
 
-        this->Text = "Список чатов";
+        this->Text = "List of chats";
         this->Controls->Add(this->chatListView);
         this->ResumeLayout(false);
 	}
